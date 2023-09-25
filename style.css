@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
+  body {
+    font-family: Arial, sans-serif;
+  }
+  nav {
+    background: #4150cb;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+	
+  }
+  nav .mainMenu {
+    display: flex;
+    list-style: none;
+	
+  }
+  nav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    transition: 0.2s ease;
+  }
+  nav .mainMenu li a:hover {
+    background: red;
+  }
+  nav .openMenu {
+    font-size: 2rem;
+    margin: 4px 30px 4px 4px;
+    display: none;
+    cursor: pointer;
+	background: #4150cb;
+  }
+  nav .mainMenu .closeMenu,
+  .icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+	background: #4150cb;
+  }
+
+  nav .logo {
+    margin: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  @media (max-width: 900px) {
+    nav .mainMenu {
+      height: 100vh;
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      left: 0px;
+      z-index: 10;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #4150cb;
+	  ;
+      transition: top 1s ease 0s;
+      display: none;
+    }
+    nav .mainMenu .closeMenu {
+      display: block;
+      position: absolute;
+      top: 4px;
+      right: 20px;
+	  color: red;
+	  border: 0px;
+    }
+    nav .openMenu {
+		border: 0px;
+      display: block;
+	  color: red;
+    }
+    nav .mainMenu li a:hover {
+		border: 0px;
+      background: none;
+      color: red;
+    }
+    .icons i {
+      display: inline-block;
+      padding: 12px;
+    }
+  }
+  
+
+
+  .container {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(100px, auto)); /* меняем grid-template-columns на grid-template-rows */
+    gap: 16px;
+    padding: 1px;
+    box-sizing: border-box;
+}
+
+.item {
+    background-color: #e0e0e0;
+    padding: 16px;
+    border-radius: 8px;
+	position: relative; /* Устанавливает контекст позиционирования для дочерних элементов */
+}
+
+
+footer {
+    background-color: #4150cb;
+    color: white;
+    text-align: left;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+	font-size: 14px;
+	line-height: 1.6; /* Высота строки относительно размера шрифта */
+}
+
+
+.outer-container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+
+.logo-img {
+	max-width: 300px;
+	border: 2px solid #4150cb;
+	float: left;
+	margin: 5px;
+}
+
+.post-img {
+    max-width: 320px;
+    height: 320px;
+
+	float: left;
+	margin: 0px;
+}
+
+.text {
+	text-align: justify;
+	font-size: 16px; /* Размер шрифта */
+    line-height: 1.6; /* Высота строки относительно размера шрифта */
+}
+
+
+/* button */
+.custom-button {
+	display: inline-block;
+    padding: 10px 20px;
+    background-color: red; 
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+	text-decoration: none;
+	text-transform: uppercase;
+    line-height: 2; /* Высота строки относительно размера шрифта */
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+
+.custom-button:hover {
+    background-color: red; 
+}
+
+.custom-button:active {
+    transform: scale(0.95); 
+}
